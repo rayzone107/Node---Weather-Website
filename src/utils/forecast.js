@@ -12,7 +12,8 @@ const forecast = (lat, long, callback) => {
             callback(undefined, {
                 summary: body.daily.data[0].summary,
                 temp: body.currently.temperature,
-                rainPercentage: body.currently.precipProbability
+                rainPercentage: body.currently.precipProbability,
+                humidity: body.currently.humidity
             })
         }
     })
